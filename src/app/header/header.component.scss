@@ -1,0 +1,13 @@
+@import "./../app.component.scss";
+
+a {
+  color: $nav-bar-font;
+}
+
+.selected {
+  color: $white;
+}
+
+.hashtag {
+  color: $primary;
+}
