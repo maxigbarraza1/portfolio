@@ -1,0 +1,11 @@
+<div class="background py-1">
+  <section class="experience-container mx-12 my-24">
+    <app-section-header [title]="'Experiencia'"></app-section-header>
+    <div class="item-container mx-8">
+      @for (experience of experiences; track $index) {
+
+      <app-experience-item [experience]="experience"></app-experience-item>
+      }
+    </div>
+  </section>
+</div>
