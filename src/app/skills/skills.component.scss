@@ -1,0 +1,11 @@
+@import "./../app.component.scss";
+
+.skills-container {
+  max-width: 100%;
+}
+
+.background {
+  background-image: url("./../../assets/skills-bg.svg");
+  height: calc(100vh - 5rem);
+  width: 100%;
+}
