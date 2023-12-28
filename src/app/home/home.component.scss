@@ -1,0 +1,21 @@
+@import "./../app.component.scss";
+
+.home-container {
+  background-image: url("./../../assets/home-bg.svg");
+  height: calc(100vh - 5rem);
+  h1 {
+    color: white;
+    letter-spacing: 5px;
+    span {
+      color: $primary;
+    }
+  }
+
+  button {
+    border-color: $primary;
+    color: $white;
+    &:hover {
+      background-color: $primary;
+    }
+  }
+}
