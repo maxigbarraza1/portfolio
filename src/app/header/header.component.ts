@@ -12,6 +12,6 @@ export class HeaderComponent {
   constructor(private _activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
-    console.log(this._activatedRoute.snapshot.url[0].path);
+    // console.log(this._activatedRoute.snapshot.url[0].path);
   }
 }
