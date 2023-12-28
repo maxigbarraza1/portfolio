@@ -1,0 +1,16 @@
+@import "./../app.component.scss";
+
+.about-container {
+  max-width: 100%;
+  height: calc(100vh - 5rem);
+
+  .about-content {
+    .about-texts {
+      max-width: 60%;
+      color: $white;
+      .color-primary {
+        color: $primary;
+      }
+    }
+  }
+}
