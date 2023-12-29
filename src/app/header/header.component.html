@@ -1,17 +1,35 @@
-<nav class="nav-container">
+<nav class="nav-container h-12 fixed w-full z-10">
   <div
     class="nav-items hidden md:flex md:flex-row md:justify-center md:items-center md:h-12 md:gap-10 xl:gap-20"
   >
-    <a routerLink="/home" class="selected"
+    <a
+      (click)="scrollToSection('inicio')"
+      [ngClass]="{ selected: currentSection === 'inicio' }"
       ><span class="hashtag">#</span>inicio</a
     >
-    <a routerLink="/home"><span class="hashtag">#</span>sobre mi</a>
-    <a routerLink="/home"><span class="hashtag">#</span>habilidades</a>
-    <a routerLink="/home"><span class="hashtag">#</span>experiencia</a>
-    <a routerLink="/home"><span class="hashtag">#</span>contacto</a>
+    <a
+      (click)="scrollToSection('sobre-mi')"
+      [ngClass]="{ selected: currentSection === 'sobre-mi' }"
+      ><span class="hashtag">#</span>sobre mi</a
+    >
+    <a
+      (click)="scrollToSection('habilidades')"
+      [ngClass]="{ selected: currentSection === 'habilidades' }"
+      ><span class="hashtag">#</span>habilidades</a
+    >
+    <a
+      (click)="scrollToSection('experiencia')"
+      [ngClass]="{ selected: currentSection === 'experiencia' }"
+      ><span class="hashtag">#</span>experiencia</a
+    >
+    <a
+      (click)="scrollToSection('contacto')"
+      [ngClass]="{ selected: currentSection === 'contacto' }"
+      ><span class="hashtag">#</span>contacto</a
+    >
   </div>
   <div
-    class="nav-hamburger flex flex-row justify-end items-center h-12 md:hidden"
+    class="nav-hamburger flex flex-row justify-end items-center h-12 md:hidden md:h-0"
   >
     <div class="space-y-2">
       <div class="w-8 h-0.5 bg-gray-600"></div>
