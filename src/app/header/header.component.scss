@@ -11,3 +11,15 @@ a {
 .hashtag {
   color: $primary;
 }
+
+@media (max-width: 768px) {
+  .nav-items {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-hamburger {
+    display: none !important;
+  }
+}
