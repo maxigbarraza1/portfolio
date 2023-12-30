@@ -1,14 +1,15 @@
 @import "./../app.component.scss";
 
+.color-primary {
+  color: $primary;
+}
+
 .home-container {
   background-image: url("./../../assets/home-bg.svg");
   height: calc(100vh - 5rem);
+  color: white;
   h1 {
-    color: white;
     letter-spacing: 5px;
-    span {
-      color: $primary;
-    }
   }
 
   button {
