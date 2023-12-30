@@ -1,10 +1,10 @@
 <section
-  class="home-container flex flex-col justify-center items-center gap-4 text-left"
+  class="home-container flex flex-col justify-center items-center gap-4 text-center md:text-left py-10 md:py-0"
 >
   <h1 class="text-5xl font-bold w-2/3">
     ¡Hola, soy <span class="color-primary">Maxi</span>!
   </h1>
-  <h3 class="text-xl font-normal text-pretty w-2/3 leading-8 mt-5">
+  <h3 class="text-xl text-pretty w-2/3 leading-8 mt-5">
     +2 años de experiencia. Desarrollador Full Stack con experiencia en
     <span class="color-primary font-semibold">Angular</span> y
     <span class="color-primary font-semibold">Laravel</span>. De Argentina,
@@ -13,7 +13,9 @@
     programación, como también compartir conocimiento e ideas con los demás y
     aprender de sus experiencias 🚀
   </h3>
-  <div class="flex flex-col md:flex-row justify-start items-start gap-5 w-2/3">
+  <div
+    class="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start gap-5 w-2/3"
+  >
     <button
       class="font-semibold py-2 px-4 border hover:border-transparent rounded-xl mt-5 flex flex-row items-center"
       (click)="navigateTo('https://www.linkedin.com/in/maxibarraza/')"
