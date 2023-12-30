@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  currentSection: string = '';
+  currentSection: string = 'inicio';
 
   constructor() {}
 
@@ -31,10 +31,8 @@ export class HeaderComponent {
 
     const sections: any = {
       inicio: this.getSectionOffset('inicio'),
-      'sobre-mi': this.getSectionOffset('sobre-mi'),
       habilidades: this.getSectionOffset('habilidades'),
       experiencia: this.getSectionOffset('experiencia'),
-      contacto: this.getSectionOffset('contacto'),
     };
 
     for (const sectionId in sections) {
