@@ -1,5 +1,5 @@
 <div class="background py-1">
-  <section class="skills-container mx-12 mb-24 mt-20">
+  <section class="skills-container mx-6 md:mx-12 mb-24 mt-20">
     <app-section-header [title]="'Habilidades'"></app-section-header>
     <div
       class="skills-content flex flex-col justify-center items-center gap-10 md:flex-row md:gap-5"
@@ -7,7 +7,7 @@
       @for (skillItem of skills; track $index) {
       <app-skills-card
         [skillItem]="skillItem"
-        class="w-2/3 md:w-1/3"
+        class="w-11/12 md:w-1/3"
       ></app-skills-card>
       }
     </div>
