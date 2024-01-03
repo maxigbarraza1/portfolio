@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent {
   currentSection: string = 'inicio';
+  openSidebar: boolean = false;
 
   constructor() {}
 
@@ -66,11 +67,16 @@ export class HeaderComponent {
   scrollToSection(sectionId: string) {
     const element = document.getElementById(sectionId);
     if (element) {
+      this.openSidebar = false;
       element.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
         inline: 'nearest',
       });
     }
+  }
+
+  toggleSidebar() {
+    this.openSidebar = !this.openSidebar;
   }
 }

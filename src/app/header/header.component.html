@@ -22,12 +22,45 @@
     >
   </div>
   <div
-    class="nav-hamburger flex flex-row justify-end items-center h-12 md:hidden md:h-0"
+    class="nav-hamburger flex flex-col justify-center items-start py-5 px-5 md:hidden md:h-0 h-auto w-fit z-auto"
+    [ngClass]="openSidebar ? 'nav-hamburger-open' : 'nav-hamburger-closed'"
   >
-    <div class="space-y-2">
-      <div class="w-8 h-0.5 bg-gray-600"></div>
-      <div class="w-8 h-0.5 bg-gray-600"></div>
-      <div class="w-8 h-0.5 bg-gray-600"></div>
+    <div class="space-y-2" (click)="toggleSidebar()">
+      <div class="w-8 h-1 bg-gray-600"></div>
+      <div class="w-8 h-1 bg-gray-600"></div>
+      <div class="w-8 h-1 bg-gray-600"></div>
     </div>
+    @if (openSidebar) {
+    <aside class="w-auto flex py-5 mt-5 z-50">
+      <nav class="w-auto">
+        <ul class="list-none flex flex-col gap-10 w-60">
+          <li class="items-center">
+            <a
+              class="cursor-pointer"
+              (click)="scrollToSection('inicio')"
+              [ngClass]="{ selected: currentSection === 'inicio' }"
+              ><span class="hashtag">#</span>Inicio</a
+            >
+          </li>
+          <li class="items-center">
+            <a
+              class="cursor-pointer"
+              (click)="scrollToSection('experiencia')"
+              [ngClass]="{ selected: currentSection === 'experiencia' }"
+              ><span class="hashtag">#</span>Experiencia</a
+            >
+          </li>
+          <li class="items-center">
+            <a
+              class="cursor-pointer"
+              (click)="scrollToSection('habilidades')"
+              [ngClass]="{ selected: currentSection === 'habilidades' }"
+              ><span class="hashtag">#</span>Habilidades</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    }
   </div>
 </nav>
